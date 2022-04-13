@@ -21,7 +21,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install docker-compose flake8
           
-      - name: Testing and Link with flake8
+      - name: Testing
         run: |
-          docker-compose run app sh -c "python manage.py test && flake8"
+          docker-compose run app sh -c "python manage.py test"
+      
+      - name: Lint with flake8
+        run: |
+          flake8 app/.
       
