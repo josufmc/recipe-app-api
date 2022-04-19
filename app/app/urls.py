@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # Delegar lo que empiece en api/user/
     path('api/user/', include('user.urls')),
+    path('api/recipe/', include('recipe.urls')),
 ]
